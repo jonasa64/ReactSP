@@ -1,0 +1,117 @@
+ex2
+
+What is a functional component ?
+function welcone(props){
+return <h1>Hello, {props.name}</h1>;
+}
+det er JavaScript functions 
+
+What is a Class Component?
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+What is the idea with props?
+props bruger man til at dynamisk opdater GUI så man ikke skal have hade coded værdi i sin kode, men varibaler fra fx et array til at output personer. 
+
+Provide a simple example in how you write a Component that accepts props?
+
+
+Provide a simple example (could be a line from the exercise above) that demonstrates how you pass props into a Component?
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+ex3 
+
+
+Would it be possible to rewrite the Clock component into a functional component (provide arguments for your answer)?
+ja der javascript 
+How do you set new values for state: In the constructor, and all other places?
+sætter ny værdi
+this.state = {navn : værdi};
+
+ænder værdi
+
+this.setState({
+navn: nyVærdi
+});
+
+How is it possible to "tell" React that you want the UI to be updated (re-rendered)?
+In your component, you can call this.forceUpdate() to force a rerender
+
+What is the difference(s) between state and props
+The main difference between state and props is that props are immutable
+How do you pass in prop values to a Component
+{this.props.navn} 
+What is the purpose of React Components Life Cycle Methods?
+allows us to update the UI and application state
+
+
+
+
+
+ex5
+
+What is the purpose of this line in the constructor: this.handleClick = this.handleClick.bind(this);
+How can we disable the default behavior of an event handler (for example prevent a submit handler to submit?)
+What is the benefit(s) you get from using arrow-functions in a ES6 class?
+
+Unlike a regular function, an arrow function does not bind this and arrow functions have shorter syntax
+
+
+day 2 
+
+ex 2
+What is the purpose of the key value, which must be given to individual rows in a react-list
+It's recommended to use a unique value from you data if available (like an ID). How do you get a unique value in a map callback, for data without a unique id?
+
+ “key” is a special string attribute you need to include when creating lists of elements.Keys help React identify which items have changed, are added, or are removed. 
+Keys should be given to the elements inside the array to give the elements a stable identity.
+When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
+
+What is the difference(s) between state and props?
+
+The main difference between state and props is that props are immutable. This is why the container component should define the state that can be updated and changed,
+ while the child components should only pass data from the state using props
+
+For which scenarios would you use props, and for which would you use state?
+child components should only pass data from the state using props
+
+
+Where is the only place you can set state directly as in: this.state = {name: "Peter"};
+  constructor 
+How must you set state all other places?
+setState
+
+
+ex 4
+
+In a Controlled Component React state is made the "Single source of truth", so how:
+Do we ensure that input controls like text, textarea or select always presents the value found in the components state?
+Do we ensure that a controls state, always matches the value found in an input control?
+
+What is the purpose of doing event.preventDefault() in an event handler?
+
+The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, 
+its default action should not be taken as it normally would be
+
+What would be the effect of NOT doing event.preventDefault in a submit handler
+
+For example, it could cause a reloading  somewhere else
+in the system when you may press submit.
+ 
+Why don't we want to submit the traditional way, in a single page application?
+What are the two different ways we can use to make this works as expected for our event handlers?
+
+Explain in words what it takes to implement the "Controlled Component" pattern for a form
+
+An input form element whose value is controlled by React in this way is called a “controlled component”.
+
+
+
